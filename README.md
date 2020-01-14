@@ -6,8 +6,9 @@ Course website: http://thiscourse.com/ucsd/cogs160bci/wi20/
 Professor: Virginia de Sa<br>
 TA: Alessandro D'Amico<br>
 TA: Kueida Liao<br>
-IA: Yundong Wang<br>
+TA: Yundong Wang<br>
 IA: Tianyu Ma (vol)<br>
+IA: Hongyi Pan (vol)<br>
 IA: Zeyun Wu (vol)
 <br>
 The assignments in this class will rely on MATLAB, specifically the EEGLAB toolbox.<br>
