@@ -7,5 +7,10 @@ Professor: Virginia de Sa<br>
 TA: Alessandro D'Amico<br>
 TA: Kueida Liao<br>
 IA: Yundong Wang<br>
-IA: Tianyu Ma (?)<br>
+IA: Tianyu Ma (vol)<br>
 IA: Zeyun Wu (vol)
+<br>
+The assignments in this class will rely on MATLAB, specifically the EEGLAB toolbox.<br>
+We are using:
+* MATLAB 2019b update 3 (available to all UCSD Students: )
+* EEGLAB 2019 v1 (download at: https://sccn.ucsd.edu/eeglab/downloadtoolbox.php)
