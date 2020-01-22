@@ -5,7 +5,8 @@
 This assignment is designed to teach students the basics of EEGLAB. We will be investigating various aspects of a synthetic dataset which will be useful for future assignments on competition data.
 <br>
 These assignments require students to have MATLAB. Currently, this assignment has been tested on MATLAB 2018b and 2019b. You will also need EEGLAB. MATLAB is installed on all computers in CSB115.
-We suggest you use your own computer for convenience since CSB 115 is not always open. All UCSD students have access to MATLAB for free.
+We suggest you use your own computer for convenience since CSB 115 is not always open. All UCSD students have access to MATLAB for free.<br>
+When installing MATLAB, please install the Signal Processing Toolbox. This toolbox is necessary for full EEGLAB functionality and is very useful for signal processing in general.
 <br>
 You will also need EEGLAB to complete this assignment. You can download EEGLAB with the following link:
 * EEGLAB 2019 v1 (download at: https://sccn.ucsd.edu/eeglab/downloadtoolbox.php)
