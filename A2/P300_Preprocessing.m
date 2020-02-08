@@ -14,7 +14,7 @@ function P300_Preprocessing(dir)
 % Known Bugs:
 % - Train data is being exported with 1 extra sample. No idea why; low importance
 
-in_dir = [dir '\raw_data\'];
+in_dir = [dir '/raw_data/'];
 out_dir = dir
 % We want to bin the data from about 0ms to 500ms after response
 % since by looking at waveform and r2 from the write-up, there isn't really
