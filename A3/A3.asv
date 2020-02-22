@@ -9,8 +9,8 @@
 % the assignment.
 %
 %
-VAR_NAME = 'First Last';
-VAR_PID  = 'A000000';
+VAR_NAME = 'First Last'
+VAR_PID  = 'A
 
 %--------------------------------------------------------------------------
 % Q1 -- What are the four classes present in this dataset?
