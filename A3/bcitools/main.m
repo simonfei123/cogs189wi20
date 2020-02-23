@@ -50,7 +50,7 @@ for subject = 1:9
       csp_per_class = 3;
       [csp_filter, all_coeff] = csp_analysis_quick(train_data, csp_per_class);
   
-      % plot topoplot of csp_filter
+%       % plot topoplot of csp_filter
 %       figure
 %       for f = 1:6
 %         subplot(2,3,f)

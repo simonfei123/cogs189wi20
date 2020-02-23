@@ -33,7 +33,7 @@ i = 1;
 
 % You will find the following lines of code very useful:
 disp(i)
-disp(find(Q2_data ~= i))
+disp(Q2_data(Q2_data ~= i)) % This is called logical indexing
 
 % WRITE YOUR FOR LOOP HERE
 % WRITE YOUR FOR LOOP HERE
@@ -64,7 +64,12 @@ Q3_Ans = []; % Put your answer here
 Q4_Ans = [];
 
 %--------------------------------------------------------------------------
-% Q5 -- Cross Validation Indices
+% Q5 -- What is the value of the 3rd rand_nums?
+% Please write code for this answer rather than an integer value
+Q5_Ans = [];
+
+%--------------------------------------------------------------------------
+% Q6 -- Cross Validation Indices
 % Follow the instructions and use the code given to you in the Google Doc 
 % to create your own for loop which sets indices into the variables
 % trainIdx and valIdx
@@ -74,48 +79,34 @@ Q4_Ans = [];
 % WRITE YOUR FOR LOOP HERE
 % WRITE YOUR FOR LOOP HERE
 
-% Ollie's implementation (delete before releasing)
-% Ollie's implementation (delete before releasing)
-% Ollie's implementation (delete before releasing)
-% Ollie's implementation (delete before releasing)
-% Ollie's implementation (delete before releasing)
+%--------------------------------------------------------------------------
+% Q7 -- Set the value of Q7_ANS to the number of spatial filters we choose
+%       from each class
+% The answer should just be an integer
 
-% Execute all functions previously requested
-A3Load
-[n_channel, n_time, n_sample] = size(EEGL_train{1, 1});
-randIdx = randperm(n_sample);
-k = 5;
-bin_size = n_sample / k;
-trainIdx = cell(k, 1);
-valIdx = cell(k, 1);
-randIdx = reshape(randIdx, k, bin_size);
-
-% Q5 implementation
-for i = 1:k
-    valIdx{i} = randIdx(i, :);
-    trainIdx{i} = randIdx(randIdx ~= valIdx{i})';
-    % validate
-    %length(unique([valIdx{i} trainIdx{i}]));
-end
+Q7_ANS = []; % Integer answer here
 
 %--------------------------------------------------------------------------
+% Q8 & Q9 -- Run the main analysis and then answer the question below
+% Do not modify the main analysis code, please scroll down
+
+%
 % Main Analysis (Do Not Modify)
+%
 
 % Declare useful variables
 [n_subjects, n_filters] = size(EEGL_train);
 train_size = bin_size * (k-1);
 val_size = bin_size;
 accuracy = zeros(n_subjects, k);
-csp_per_class = 3;
-
-%rng(1); % set seed
+csp_per_class = Q7_ANS; % Dependent on student's Q7 answer
 
 % Begin nested loops
 % Subject > Fold > Band
 for subject = 1:n_subjects
     for fold = 1:k
         bandScore_train = zeros(train_size*2, n_filters);
-        bandScore_val   = zeros(val_size*2,   n_filters);
+        bandScore_cv    = zeros(val_size*2,   n_filters);
         for band = 1:n_filters
             L_train = EEGL_train{subject, band}(:, :, trainIdx{fold});
             R_train = EEGR_train{subject, band}(:, :, trainIdx{fold});
@@ -162,9 +153,21 @@ for subject = 1:n_subjects
     end
 end
 
+%
+% Main Analysis Over
+%
+
+% Q8 -- What is the dimensionality of csp_filter? 
+Q8_ANS = [];
+
+% Q9 -- In csp_filter, are the filters defined by the rows or columns?
+% For this question, index Q8_ANS with the appropriate value.
+% row = Q8_ANS(1);
+% col = Q8_ANS(2);
+Q9_ANS = Q8_ANS(0); % Modify the integer from 0 to 1 or 2
 
 %--------------------------------------------------------------------------
-% (Extra Credit) Q6 -- Create your own classifier
+% (Extra Credit) Q10 -- Create your own classifier
 % You don't even have to use LDA if you don't want to, but the main
 % task is to find a better way to utilize the filter bank besides
 % simply averaging their classification probabilities.
