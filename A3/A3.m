@@ -9,7 +9,7 @@
 % the assignment.
 %
 %
-VAR_NAME = 'First Last';
+VAR_NAME = "First Last"; %" rather than ' for apostrophe last names
 VAR_PID  = 'A000000';
 
 %--------------------------------------------------------------------------
@@ -32,8 +32,8 @@ Q2_data = [1, 2, 3, 4, 5];
 i = 1;
 
 % You will find the following lines of code very useful:
-disp(i)
-disp(Q2_data(Q2_data ~= i)) % This is called logical indexing
+%disp(i)
+%disp(Q2_data(Q2_data ~= i)) % This is called logical indexing
 
 % WRITE YOUR FOR LOOP HERE
 % WRITE YOUR FOR LOOP HERE
@@ -59,7 +59,7 @@ disp(Q2_data(Q2_data ~= i)) % This is called logical indexing
 Q3_Ans = []; % Put your answer here
 
 %--------------------------------------------------------------------------
-% Q4 -- When k=5, how many samples are in each bin?
+% Q4 -- When k=6, how many samples are in each bin?
 % Please write code for this answer rather than an integer value
 Q4_Ans = [];
 
@@ -167,11 +167,6 @@ Q8_ANS = [];
 Q9_ANS = Q8_ANS(0); % Modify the integer from 0 to 1 or 2
 
 %--------------------------------------------------------------------------
-% (Extra Credit) Q10 -- Create your own classifier
-% You don't even have to use LDA if you don't want to, but the main
-% task is to find a better way to utilize the filter bank besides
-% simply averaging their classification probabilities.
-% Please do not modify the code above, but rather copy and paste it
-% and modify it down below
-
-% YOUR CODE HERE
+% Q10 -- What is the mean accuracy of every subject?
+% Please write your answer using code rather than a float
+Q10_ANS = [];

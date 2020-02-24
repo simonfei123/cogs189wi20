@@ -3,13 +3,21 @@
 %load MotorImagery_train.mat
 %load MotorImagery_eval.mat
 A3Load
-load BCICIV2a_loc.mat
+%load BCICIV2a_loc.mat
 
 %eeglab;
 close all
 
 
 folds = 1;
+
+% reduce EEG_train to first 60 to match this old script
+for i = 1:size(EEGL_train, 1)
+    for j = 1:size(EEGL_train, 2)
+        EEGL_train{i, j} = EEGL_train{i, j}(:, :, 1:60);
+        EEGR_train{i, j} = EEGR_train{i, j}(:, :, 1:60);
+    end
+end
 
 % split data into training and cross-validation by indices
 [n_channel, n_time, n_sample] = size(EEGL_train{1,1});
