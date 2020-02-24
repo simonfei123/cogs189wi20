@@ -15,3 +15,8 @@ for i = 1:size(EEGL_eval, 1)
     save([DIR '\data\ev_EEGL_' num2str(i) '.mat'], 'L');
     save([DIR '\data\ev_EEGR_' num2str(i) '.mat'], 'R');
 end
+
+for i = 1:size(EEG_eval, 1)
+    E = EEG_eval(i, :);
+    save([DIR '\data\ev_EEG_' num2str(i) '.mat'], 'E');
+end
