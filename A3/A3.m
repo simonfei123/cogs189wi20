@@ -131,11 +131,11 @@ for subject = 1:n_subjects
             cv_CSPed{1} = squeeze(cell_to_mat(cv_CSPed{1}))';
             cv_CSPed{2} = squeeze(cell_to_mat(cv_CSPed{2}))';
 
-            % prepare data for LDA training
+            % prepare data for LDA training (assumes balanced classes)
             X_train = cat(1, train_CSPed{1}, train_CSPed{2})';
             X_cv = cat(1, cv_CSPed{1}, cv_CSPed{2})';
-            y_train = [ones(size(train_CSPed{1},1),1); -1*ones(size(train_CSPed{2},1),1)];
-            y_cv = [ones(size(cv_CSPed{1},1),1); -1*ones(size(cv_CSPed{2},1),1)];
+            y_train = [ones(train_size, 1); -1*ones(train_size, 1)];
+            y_cv = [ones(val_size, 1); -1*ones(val_size, 1)];
 
             % train LDA
             [train_prob, cv_prob] =  lda_train(X_train, X_cv, y_train, y_cv);
@@ -145,11 +145,11 @@ for subject = 1:n_subjects
         end
         
         X_train = bandScore_train;
-        y_train = [ones(n_sample*0.8,1); zeros(n_sample*0.8,1)];
+        y_train = [ones(train_size, 1); zeros(train_size, 1)];
         X_cv = bandScore_cv;
-        y_cv = [ones(n_sample*0.2,1); zeros(n_sample*0.2,1)];
+        y_cv = [ones(val_size, 1); zeros(val_size, 1)];
         cv_score = TA_classifier(X_train, y_train, X_cv, subject);
-        accuracy(subject,fold) = sum(y_cv==round(cv_score))/(n_sample*0.2*2);
+        accuracy(subject,fold) = sum(y_cv==round(cv_score))/(val_size*2);
     end
 end
 
