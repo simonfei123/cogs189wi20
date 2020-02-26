@@ -15,4 +15,4 @@ You will be uploading 'A3.m' as your submission to Gradescope. Every question wi
 the variables which contain answers such as Q1_ANS, Q2_ANS, etc. Make sure your code executes and runs to completion before
 submitting your final script to Gradescope.
 <br><br>
-The Google Docs file can be found <INSERT DOC LINK>.
+The Google Docs file can be found here: https://docs.google.com/document/d/1g10NXUjCspt78eXt8nQjkCOMPMiFgn_JsVoc8mZIjhQ/edit?usp=sharing
