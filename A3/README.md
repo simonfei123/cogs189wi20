@@ -1,6 +1,6 @@
 # Assignment 3
-## Assigned: DAY XX February 2020
-## Due: DAY XX February 2020 @ 11:59 PM PST
+## Assigned: Tuesday 25 February 2020
+## Due: Thursday 05 March 2020 @ 11:59 PM PST
 
 This assignment will go through using CSP to train a 2-class LDA classifier on motor imagery competition data. You will need
 to do some programming for this assignment, but it should be well within the scope of your abilities. We have switched back
